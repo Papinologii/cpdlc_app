@@ -12543,7 +12543,11 @@ var $author$project$Main$header = A2(
 				]),
 			$mdgriffith$elm_ui$Element$text('ATM001'))
 		]));
+var $mdgriffith$elm_ui$Element$explain = function (_v0) {
+	return $mdgriffith$elm_ui$Internal$Model$htmlClass('explain');
+};
 var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
+var $elm$core$Debug$todo = _Debug_todo;
 var $author$project$Main$inputMessageTextRow = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
@@ -12551,7 +12555,14 @@ var $author$project$Main$inputMessageTextRow = A2(
 			$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 			$mdgriffith$elm_ui$Element$height(
 			$mdgriffith$elm_ui$Element$fillPortion(1)),
-			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white)
+			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white),
+			$mdgriffith$elm_ui$Element$explain(
+			_Debug_todo(
+				'Main',
+				{
+					start: {line: 284, column: 19},
+					end: {line: 284, column: 29}
+				}))
 		]),
 	_List_fromArray(
 		[
@@ -12561,17 +12572,13 @@ var $author$project$Main$inputMessageTextRow = A2(
 				[$mdgriffith$elm_ui$Element$centerX, $mdgriffith$elm_ui$Element$centerY]),
 			$mdgriffith$elm_ui$Element$text('InputMessage Text Row'))
 		]));
-var $mdgriffith$elm_ui$Element$explain = function (_v0) {
-	return $mdgriffith$elm_ui$Internal$Model$htmlClass('explain');
-};
-var $elm$core$Debug$todo = _Debug_todo;
 var $author$project$Main$messageListRow = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
 		[
 			$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 			$mdgriffith$elm_ui$Element$height(
-			$mdgriffith$elm_ui$Element$fillPortion(1)),
+			$mdgriffith$elm_ui$Element$fillPortion(2)),
 			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white)
 		]),
 	_List_fromArray(
@@ -12587,8 +12594,8 @@ var $author$project$Main$messageListRow = A2(
 					_Debug_todo(
 						'Main',
 						{
-							start: {line: 239, column: 23},
-							end: {line: 239, column: 33}
+							start: {line: 240, column: 23},
+							end: {line: 240, column: 33}
 						}))
 				]),
 			_List_fromArray(
@@ -12610,8 +12617,8 @@ var $author$project$Main$messageListRow = A2(
 					_Debug_todo(
 						'Main',
 						{
-							start: {line: 250, column: 23},
-							end: {line: 250, column: 33}
+							start: {line: 251, column: 23},
+							end: {line: 251, column: 33}
 						}))
 				]),
 			_List_fromArray(
@@ -12629,8 +12636,15 @@ var $author$project$Main$selectMessagePartsRow = A2(
 		[
 			$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 			$mdgriffith$elm_ui$Element$height(
-			$mdgriffith$elm_ui$Element$fillPortion(3)),
-			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white)
+			$mdgriffith$elm_ui$Element$fillPortion(4)),
+			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white),
+			$mdgriffith$elm_ui$Element$explain(
+			_Debug_todo(
+				'Main',
+				{
+					start: {line: 268, column: 19},
+					end: {line: 268, column: 29}
+				}))
 		]),
 	_List_fromArray(
 		[
@@ -12650,14 +12664,20 @@ var $author$project$Main$content = A2(
 	_List_fromArray(
 		[$author$project$Main$messageListRow, $author$project$Main$selectMessagePartsRow, $author$project$Main$inputMessageTextRow]));
 var $author$project$Main$secondaryColor = A3($mdgriffith$elm_ui$Element$rgb255, 1, 53, 51);
+var $mdgriffith$elm_ui$Element$Font$size = function (i) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$fontSize,
+		$mdgriffith$elm_ui$Internal$Model$FontSize(i));
+};
 var $author$project$Main$sidebar = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(
 		[
 			$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill),
-			A2($mdgriffith$elm_ui$Element$paddingXY, 3, 10),
-			$mdgriffith$elm_ui$Element$spacing(10),
-			$mdgriffith$elm_ui$Element$Font$bold,
+			A2($mdgriffith$elm_ui$Element$paddingXY, 15, 10),
+			$mdgriffith$elm_ui$Element$spacing(15),
+			$mdgriffith$elm_ui$Element$Font$size(20),
 			$mdgriffith$elm_ui$Element$Font$color($author$project$Main$white),
 			$mdgriffith$elm_ui$Element$Background$color($author$project$Main$thirdColor)
 		]),
@@ -12669,7 +12689,8 @@ var $author$project$Main$sidebar = A2(
 				[
 					$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 					$mdgriffith$elm_ui$Element$Background$color($author$project$Main$secondaryColor),
-					$mdgriffith$elm_ui$Element$Font$color($author$project$Main$orange)
+					$mdgriffith$elm_ui$Element$Font$color($author$project$Main$orange),
+					$mdgriffith$elm_ui$Element$Font$bold
 				]),
 			A2(
 				$mdgriffith$elm_ui$Element$el,

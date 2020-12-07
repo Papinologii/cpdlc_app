@@ -196,9 +196,9 @@ sidebar : Element msg
 sidebar =
     column
         [ height fill
-        , paddingXY 3 10
-        , spacing 10
-        , Font.bold
+        , paddingXY 15 10
+        , spacing 15
+        , Font.size 20
         , Font.color white
         , Background.color thirdColor
         ]
@@ -206,6 +206,7 @@ sidebar =
             [ width fill
             , Background.color secondaryColor
             , Font.color orange
+            , Font.bold
             ]
             (el [ centerX ] (text "None"))
         , text "EZY123"
@@ -230,7 +231,7 @@ messageListRow : Element msg
 messageListRow =
     row
         [ width fill
-        , height (fillPortion 1)
+        , height (fillPortion 2)
         , Font.color white
         ]
         [ row
@@ -262,8 +263,9 @@ selectMessagePartsRow : Element msg
 selectMessagePartsRow =
     row
         [ width fill
-        , height (fillPortion 3)
+        , height (fillPortion 4)
         , Font.color white
+        , explain Debug.todo
         ]
         [ el
             [ centerX
@@ -279,6 +281,7 @@ inputMessageTextRow =
         [ width fill
         , height (fillPortion 1)
         , Font.color white
+        , explain Debug.todo
         ]
         [ el
             [ centerX
