@@ -146,7 +146,7 @@ filterRow model =
             (Input.text
                 [ centerX
                 , centerY
-                , width (px 100)
+                , width (px 200)
                 , spacing 16
                 , Font.color thirdColor
                 , onEnter EnterWasPressed
