@@ -186,7 +186,11 @@ createFilterButton textValue =
 
 middle : Element msg
 middle =
-    row [ height fill, width fill ]
+    row
+        [ height fill
+        , width fill
+        , Background.color primaryColor
+        ]
         [ sidebar
         , content
         ]
@@ -303,7 +307,7 @@ secondaryColor =
 
 thirdColor : Color
 thirdColor =
-    rgba255 0 46 46 78.0
+    rgba255 0 46 46 78
 
 
 orange : Color
