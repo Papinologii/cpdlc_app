@@ -237,17 +237,22 @@ messageListRow =
         [ width fill
         , height (fillPortion 2)
         , Font.color white
+        , paddingXY 5 0
         ]
         [ row
             [ width (fillPortion 3)
             , height fill
-            , explain Debug.todo
             ]
-            [ el
-                [ centerX
-                , centerY
+            [ column
+                [ width fill
+                , height fill
+                , paddingXY 10 10
+                , Border.width 1
+                , Background.color thirdColor
                 ]
-                (text "Message List Row")
+                [ el []
+                    (text "Message List Row")
+                ]
             ]
         , row
             [ width (fillPortion 1)
