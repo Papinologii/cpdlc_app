@@ -227,6 +227,29 @@ content =
         ]
 
 
+type alias DLCMessage =
+    { time : String
+    , source : String
+    , commandType : String
+    , message : String
+    }
+
+
+dlcMessages : List DLCMessage
+dlcMessages =
+    [ { time = "17:18:15 25 APR 2022"
+      , source = "KLM456"
+      , commandType = "WCO/CLIMB"
+      , message = "350 WCO/CLIMB 330"
+      }
+    , { time = "17:45:33 25 APR 2022"
+      , source = "MUAC"
+      , commandType = "WCO/CLIMB"
+      , message = "330 WCO/CLIMB 380"
+      }
+    ]
+
+
 messageListRow : Element msg
 messageListRow =
     row
@@ -234,16 +257,41 @@ messageListRow =
         , height (fillPortion 2)
         , Font.color white
         ]
-        [ row
+        [ column
             [ width (fillPortion 3)
             , height fill
             , explain Debug.todo
             ]
-            [ el
-                [ centerX
-                , centerY
-                ]
-                (text "Message List Row")
+            [ Element.table
+                []
+                { data = dlcMessages
+                , columns =
+                    [ { header = Element.text "Time"
+                      , width = fill
+                      , view =
+                            \dlcMessage ->
+                                Element.text dlcMessage.time
+                      }
+                    , { header = Element.text "Source"
+                      , width = fill
+                      , view =
+                            \dlcMessage ->
+                                Element.text dlcMessage.source
+                      }
+                    , { header = Element.text "Command Type"
+                      , width = fill
+                      , view =
+                            \dlcMessage ->
+                                Element.text dlcMessage.commandType
+                      }
+                    , { header = Element.text "Message"
+                      , width = fill
+                      , view =
+                            \dlcMessage ->
+                                Element.text dlcMessage.message
+                      }
+                    ]
+                }
             ]
         , row
             [ width (fillPortion 1)
