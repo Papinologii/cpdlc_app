@@ -263,29 +263,31 @@ messageListRow =
             , explain Debug.todo
             ]
             [ Element.table
-                []
+                [Font.family[ Font.monospace]
+                , Font.size 16 
+                ,Font.center]
                 { data = dlcMessages
                 , columns =
-                    [ { header = Element.text "Time"
-                      , width = fill
+                    [ { header = el[Font.bold, Font.size 18] (Element.text "Time")
+                      , width = fillPortion 2
                       , view =
                             \dlcMessage ->
                                 Element.text dlcMessage.time
                       }
-                    , { header = Element.text "Source"
-                      , width = fill
+                    , { header = el[Font.bold, Font.size 18] (Element.text "Source")
+                      , width = fillPortion 1
                       , view =
                             \dlcMessage ->
                                 Element.text dlcMessage.source
                       }
-                    , { header = Element.text "Command Type"
-                      , width = fill
+                    , { header = el[Font.bold, Font.size 18] (Element.text "Command Type")
+                      , width = fillPortion 1
                       , view =
                             \dlcMessage ->
                                 Element.text dlcMessage.commandType
                       }
-                    , { header = Element.text "Message"
-                      , width = fill
+                    , { header = el[Font.bold, Font.size 18] (Element.text "Message")
+                      , width = fillPortion 2
                       , view =
                             \dlcMessage ->
                                 Element.text dlcMessage.message
